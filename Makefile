@@ -14,6 +14,7 @@ install:
 	sudo chmod -R 755 /var/www/$(PROJECT)
 	sudo install $(PROJECT).conf /etc/apache2/sites-available
 	sudo a2ensite $(PROJECT)
+# 	sudo a2enmod wsgi  # Already enabled?
 	sudo systemctl reload apache2
 # 	sudo a2ensite /etc/apache2/sites-available/$(PROJECT)
 # 	sudo service apache2 restart
